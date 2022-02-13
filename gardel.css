@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+body{
+    background-color: #1d1d1d;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color:#141414;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 24px;
+}
+.container {
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 1000px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .logo {
+    font-size: 2.5rem;
+    color: whitesmoke;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li a {
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+.search {
+    background-color: transparent;
+    border: 2px solid #3b3b3b;
+    border-radius: 50px;
+    color:white;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.search::placeholder{
+    color: #706e6e;
+}
+
+.search:focus {
+    background-color: #3b3b3b;
+    outline: none;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie {
+    background-color: #141414;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin: 1rem;
+    width: 300px;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+    margin:0;
+}
+
+.movie-info span {
+    background-color: #1d1d1d;
+    border-radius: 3px;
+    font-weight: bold;
+    padding:  0.25rem 0.25rem;
+}
+
+.movie-info span.green {
+    color: rgb(39, 189, 39);
+}
+
+.movie-info span.orange {
+    color: orange
+}
+
+.movie-info span.red {
+    color: rgb(189, 42, 42)
+}
+
+.overview {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 2rem;
+    position: absolute;
+    max-height: 100%;
+    overflow: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.overview h4 {
+    margin-top: 0;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
+
+
+/*medias queries*/
+@media screen and (max-width: 700px) { /*importante para la resolución cuando achivo, a parti de los 700px adquiero las especificaciones colocadas entre {}*/
+    .content {
+        font-size: 1.4rem;
+        margin: 2rem auto 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}
