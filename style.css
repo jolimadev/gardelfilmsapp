@@ -153,7 +153,7 @@ main{
 
 /*medias queries*/
 @media screen and (max-width: 700px) { /*importante para la resolución cuando achivo, a parti de los 700px adquiero las especificaciones colocadas entre {}*/
-    .content {
+    .container {
         font-size: 1.4rem;
         margin: 2rem auto 0;
     }
